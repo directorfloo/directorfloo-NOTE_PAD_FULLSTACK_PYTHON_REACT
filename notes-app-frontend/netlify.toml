@@ -1,7 +1,8 @@
 
   [build]
+   base = "notes_app_frontend"
     command = "npm run build"
-    publish = "dist"
+    publish = "notes_app_frontend/dist"
 
   [[redirects]]
     from = "/*"
