@@ -16,6 +16,7 @@ DEBUG = os.environ.get("DEBUG", "True") == "True"
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 AUTH_USER_MODEL = 'auth_app.User'
 INSTALLED_APPS = [
+    "corsheaders",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -25,7 +26,6 @@ INSTALLED_APPS = [
     # Third party
     "rest_framework",
     "rest_framework_simplejwt",
-    "corsheaders",
     # Local
     "apps.auth_app",
     "apps.notes",
@@ -118,8 +118,12 @@ SIMPLE_JWT = {
 # ── CORS ──────────────────────────────────────────────────────────────────────
 CORS_ALLOWED_ORIGINS = os.environ.get(
     "CORS_ALLOWED_ORIGINS",
-    "http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173,http://127.0.0.1:5174,"
-    "://127.0.0.1:8000,https://pourmymind.onrender.com",
+    "http://localhost:5173,"
+    "http://localhost:5174,"
+    "http://127.0.0.1:5173,"
+    "http://127.0.0.1:5174,"
+    "://127.0.0.1:8000,"
+    "https://pourmymindnoteapp.netlify.app",
 ).split(",")
 
 CORS_ALLOW_CREDENTIALS = True
@@ -131,7 +135,6 @@ DATABASE = {
     )
 }
 
-CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_HEADERS = [
     "accept",
