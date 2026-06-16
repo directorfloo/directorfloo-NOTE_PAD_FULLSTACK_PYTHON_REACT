@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import { useSelector } from "react-redux";
 
-import RegisterPage from "./pages/RegisterPage.jsx";
-import LoginPage from "./pages/LoginPage.jsx";
-import ProfilePage from "./pages/ProfilePage.jsx";
-import NotesPage from "./pages/NotesPage.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import RegisterPage from "../src/pages/RegisterPage.jsx";
+import LoginPage from "../src/pages/LoginPage.jsx";
+import ProfilePage from "../src/pages/ProfilePage.jsx";
+import NotesPage from "../src/pages/NotesPage.jsx";
+import ProtectedRoute from "../src/components/ProtectedRoute.jsx";
 
 export default function App() {
   const user = useSelector((state) => state.auth.user);
