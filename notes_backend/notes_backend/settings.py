@@ -118,7 +118,7 @@ SIMPLE_JWT = {
 # ── CORS ──────────────────────────────────────────────────────────────────────
 CORS_ALLOWED_ORIGINS = os.environ.get(
     "CORS_ALLOWED_ORIGINS",
-    "http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173,http://127.0.0.1:5174,http://127.0.0.1:8000",
+    "http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173,http://127.0.0.1:5174,http://127.0.0.1:8000,https://6a310c66087ecb15317f235c--pourmymindnoteapp.netlify.app/",
 ).split(",")
 
 CORS_ALLOW_CREDENTIALS = True
