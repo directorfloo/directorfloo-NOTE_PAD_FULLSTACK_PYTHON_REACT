@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const BASE_URL = import.meta.env.VITE_AUTH_URL;
+const BASE_URL = 'https://pourmymind.onrender.com/api';
 
 export const registerApi = createApi({
     reducerPath: "registerApi",
