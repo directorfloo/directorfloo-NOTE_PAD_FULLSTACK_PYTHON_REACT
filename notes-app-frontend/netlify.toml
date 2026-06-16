@@ -2,7 +2,7 @@
   [build]
    base = "notes-app-frontend"
     command = "CI= npm install && npm run build"
-    publish = "build"
+    publish = "dist"
 
   [[redirects]]
     from = "/*"
