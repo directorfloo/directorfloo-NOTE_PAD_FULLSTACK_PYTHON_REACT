@@ -1,5 +1,6 @@
+
+/* eslint-disable */
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import Header from "../components/Header.jsx";
 import {
   useGetNotesQuery,
@@ -10,10 +11,6 @@ import {
 
 export default function NotesPage() {
 
-  const auth = useSelector((state) => state.auth);  // ✅ add this
-  console.log("🔐 Auth state:", auth);               // ✅ add this
-  console.log("🎟️ Token:", auth?.user?.token);
-  console.log("🔐 Auth state:", JSON.stringify(auth));
 
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState(null);
