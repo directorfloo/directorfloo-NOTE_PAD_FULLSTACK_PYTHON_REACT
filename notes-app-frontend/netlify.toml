@@ -1,6 +1,6 @@
 
   [build]
-   base = "notes_app_frontend"
+   base = "notes-app-frontend"
     command = "npm run build"
     publish = "notes_app_frontend/dist"
 
