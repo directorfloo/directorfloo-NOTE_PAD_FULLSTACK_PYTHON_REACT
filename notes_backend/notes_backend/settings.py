@@ -13,7 +13,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-change-me-in-producti
 
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1,pourmymind.onrender.com").split(",")
 AUTH_USER_MODEL = 'auth_app.User'
 INSTALLED_APPS = [
     "corsheaders",
@@ -63,16 +63,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "notes_backend.wsgi.application"
 
-DATABASES = {
-    "default": {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get("DATABASE_NAME"),
-        'USER': os.environ.get("DATABASE_USERNAME"),
-        'PASSWORD': os.environ.get("DATABASE_PASSWORD"),
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     "default": {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get("DATABASE_NAME"),
+#         'USER': os.environ.get("DATABASE_USERNAME"),
+#         'PASSWORD': os.environ.get("DATABASE_PASSWORD"),
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
@@ -122,13 +122,12 @@ CORS_ALLOWED_ORIGINS = os.environ.get(
     "http://localhost:5174,"
     "http://127.0.0.1:5173,"
     "http://127.0.0.1:5174,"
-    "://127.0.0.1:8000,"
     "https://pourmymindnoteapp.netlify.app",
 ).split(",")
 
 CORS_ALLOW_CREDENTIALS = True
 
-DATABASE = {
+DATABASES = {
     "default": dj_database_url.config(
         default=os.environ.get("DATABASE_URL"),
         conn_max_age=600,
