@@ -13,7 +13,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-change-me-in-producti
 
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1,pourmymind.onrender.com").split(",")
+ALLOWED_HOSTS = [
+    "pourmymind.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 AUTH_USER_MODEL = 'auth_app.User'
 INSTALLED_APPS = [
     "corsheaders",
